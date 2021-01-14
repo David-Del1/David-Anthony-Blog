@@ -1,0 +1,14 @@
+@font-face {
+  font-family: exo;
+  src: url(../fonts/Exo_2/Exo2-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: raleway;
+  src: url(../fonts/Raleway/Raleway-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: varela;
+  src: url(../fonts/Varela_Round/VarelaRound-Regular.ttf);
+}
