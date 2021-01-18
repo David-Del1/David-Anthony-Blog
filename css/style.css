@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: rgb(75, 64, 57);
+  background-color: var(--deepspace);
   overflow-x: hidden;
 }
 
@@ -19,13 +19,14 @@ ul {
 
 a {
   text-decoration: none;
-  color: var(--light-blue);
+  color: var(--ivory);
 }
 
 p {
   font-family: var(--varela);
-  color: var(--gainsboro);
-  text-shadow: 0px 1px 2px black;
+  color: var(--ivory);
+  text-shadow: 0px 0px 2px black;
+  font-size: 1.2rem;
 }
 
 h2 {
@@ -64,13 +65,12 @@ button.btn {
 
 :root {
   /*  Color variables  */
-
-  --apricot: #9e9877;
-  --gainsboro: #dee2e3;
-  --light-blue: #a0d2db;
-  --cordovan: #984447;
-  --space: #485557;
-
+  --ivory: #fbfff1;
+  --catawba: #653239;
+  --onyx: #303635;
+  --deepspace: #586f6b;
+  --spanish: #9e9596;
+  --marigold: #f0a202;
   /* font variables */
 
   --exo: "exo";
@@ -81,10 +81,10 @@ button.btn {
 /*                Navigation Bar                      */
 
 .nav {
-  background: var(--space);
-  height: 10vh;
+  background: #303635;
+  height: 5rem;
   transition: height 1s ease-in-out;
-  width: 100vw;
+  width: 100%;
   box-shadow: 0 5px 10px black;
   z-index: 1000;
   position: fixed;
@@ -101,7 +101,7 @@ button.btn {
 }
 
 .nav.active {
-  height: 60%;
+  height: 30rem;
 }
 
 .brand {
@@ -115,10 +115,11 @@ nav.nav .nav-bar .brand a {
   text-transform: uppercase;
   font-size: 1.8rem;
   font-family: var(--raleway);
-  color: var(--gainsboro);
+  color: var(--ivory);
   text-shadow: 0px 3px 2px black;
   white-space: nowrap;
   margin-left: 1rem;
+  font-weight: bold;
 }
 
 nav.nav .nav-bar .nav-list {
@@ -135,10 +136,11 @@ nav.nav .nav-bar .nav-list .nav-item {
 
 .nav .nav-bar .nav-list .nav-item a {
   transition: color 0.3s ease-in-out;
+  letter-spacing: 0.2rem;
 }
 
 .nav .nav-bar .nav-list .nav-item a:hover {
-  color: var(--cordovan);
+  color: var(--marigold);
   transition: all 0.3s ease-in-out;
 }
 
@@ -149,7 +151,7 @@ nav.nav .nav-bar .social-media {
 }
 
 nav.nav .nav-bar .social-media .icons i {
-  color: var(--light-blue);
+  color: var(--ivory);
   padding: 0 0.5rem;
   font-size: 1.4rem;
   text-shadow: 0px 1.5px 0px black;
@@ -157,7 +159,7 @@ nav.nav .nav-bar .social-media .icons i {
 }
 
 nav.nav .nav-bar .social-media .icons i:hover {
-  color: var(--cordovan);
+  color: var(--marigold);
   transition: all 0.3s ease-in-out;
 }
 
@@ -173,7 +175,7 @@ nav.nav .nav-bar .hamburger .menu-btn {
   height: 40px;
   cursor: pointer;
   transition: all 0.5s ease-in-out;
-  border: 3px solid var(--gainsboro);
+  border: 3px solid var(--ivory);
   border-radius: 10px;
   display: none;
   animation: pulse 2s infinite;
@@ -182,7 +184,7 @@ nav.nav .nav-bar .hamburger .menu-btn {
 nav.nav .nav-bar .hamburger .menu-btn .menu-btn-burger {
   width: 20px;
   height: 3px;
-  background: var(--gainsboro);
+  background: var(--ivory);
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
 }
@@ -193,7 +195,7 @@ nav.nav .nav-bar .hamburger .menu-btn .menu-btn-burger::after {
   position: absolute;
   width: 20px;
   height: 3px;
-  background: var(--gainsboro);
+  background: var(--ivory);
   border-radius: 8px;
   transition: all 0.5s ease-in-out;
 }
@@ -228,17 +230,19 @@ body .welcome {
   height: 60vh;
   background-image: url(../assets/karl-fredrickson-DsAjH9B24G8-unsplash.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position-y: 70px;
+  opacity: 0.8;
 }
 
 body .welcome .welcome-text {
-  color: var(--gainsboro);
+  color: var(--ivory);
   font-family: var(--varela);
   font-size: 1.4rem;
   position: absolute;
   top: 30%;
   left: 10%;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 1px 1px 4px black;
 }
 
 /* Arrows css */
@@ -283,7 +287,7 @@ main .site-content {
 main .site-content .recent-post-text {
   margin: 2rem 0rem;
   text-align: center;
-  color: var(--gainsboro);
+  color: var(--ivory);
   text-shadow: 0px 2px 2px black;
 }
 
@@ -303,7 +307,7 @@ main .site-content .post-content > .post-image,
 }
 
 main .site-content .post-content > .post-image .post-info {
-  background: var(--gainsboro);
+  background: var(--ivory);
   padding: 0.5rem;
   position: absolute;
   bottom: 0%;
@@ -340,26 +344,33 @@ main .site-content .post-content > .post-image .img:hover {
 
 main .site-content .post-content > .post-image .post-info span {
   margin: 0 0.5rem;
-  color: black;
+  color: var(--onyx);
+}
+
+main .site-content .post-content .post-title p {
+  margin: 0.8rem;
 }
 
 main .site-content .post-content .post-title .btn {
   border-radius: 0.5rem;
   padding: 0.7rem 1.5rem;
-  color: var(--gainsboro);
-  background-color: var(--space);
+  background-color: var(--ivory);
   margin-top: 0.6rem;
   box-shadow: 0px 4px 2px black;
 }
 
 .site-content .pagination {
   justify-content: center;
-  color: var(--space);
+  color: white;
   margin: 4rem 0;
 }
 
 .site-content .pagination i {
-  color: var(--cordovan);
+  color: var(--onyx);
+}
+
+.site-content .pagination i:hover {
+  color: var(--catawba);
 }
 
 .site-content .pagination a {
@@ -370,13 +381,12 @@ main .site-content .post-content .post-title .btn {
 }
 
 .site-content .pagination .pages {
-  background-color: var(--space);
-  color: var(--gainsboro);
+  background-color: var(--deepspace);
+  color: var(--ivory);
 }
 
 .site-content .pagination .pages:hover {
-  background-color: var(--cordovan);
-  color: black;
+  background-color: var(--marigold);
 }
 
 /* ------------- Sidebar css ------------- */
@@ -387,10 +397,9 @@ main .site-content .post-content .post-title .btn {
 
 .site-content .sidebar .popular-post h3 {
   padding-top: 8rem;
-  color: #bce7fd;
+  color: var(--ivory);
   text-shadow: 0px 1px 1px black;
   text-align: center;
-  text-decoration: underline;
   padding-bottom: 1rem;
 }
 
@@ -399,16 +408,15 @@ main .site-content .post-content .post-title .btn {
   bottom: 0rem !important;
   left: 1rem !important;
   border-radius: 0.4rem !important;
-  background: white !important;
+  background: var(--ivory) !important;
 }
 
 .site-content .sidebar .popular-post .post-info span a {
-  color: black;
+  color: var(--onyx);
 }
 
-.site-content .sidebar .popular-post .post-title a {
-  font-size: 1rem;
-  color: black !important;
+.site-content .sidebar .popular-post .post-info span h4 {
+  font-size: 1.1rem;
 }
 
 /* ------------------- About me css ---------------- */
@@ -437,14 +445,89 @@ main.about-container p {
   padding: 2.5rem 0;
 }
 
+/*      Footer css       */
+
+footer.footer {
+  background: #4a4849;
+  position: relative;
+  box-shadow: 0px 0px 7px black;
+}
+
+footer.footer .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+footer.footer .container > div {
+  padding: 3rem 0.9rem;
+}
+
+footer.footer .container h2 {
+  color: white;
+  width: 30vw;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+footer.footer .about-me {
+  width: 20rem;
+}
+
+footer.footer .about-me h2 {
+  border-bottom: 3px solid #f0a202;
+  padding-bottom: 0.5rem;
+  padding-left: 0.8rem;
+  width: 6rem;
+}
+
+footer.footer .follow {
+  margin: 0 5rem;
+}
+
+footer.footer .follow div i {
+  color: var(--ivory);
+  padding: 0.8rem;
+  font-size: 1.5rem;
+}
+
+footer.footer .rights {
+  justify-content: center;
+  font-family: var(--libre);
+  color: var(--ivory);
+  opacity: 0.5;
+}
+
+footer.footer .rights h4 {
+  color: var(--ivory);
+  margin-bottom: 1rem;
+}
+
+footer.footer .move-up {
+  position: absolute;
+  right: 6%;
+  top: 42%;
+}
+
+footer.footer .move-up span {
+  color: var(--ivory);
+  transition: all 0.2s ease-in-out;
+}
+
+footer.footer .move-up span:hover {
+  color: var(--marigold);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
 /* =========================== Media queries ====================================== */
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1100px) {
   .nav .nav-bar,
   .nav .nav-bar .nav-list {
     flex-direction: column;
     display: flex;
     align-items: center;
+    width: 100vw;
   }
 
   .brand {
@@ -463,13 +546,20 @@ main.about-container p {
   }
 
   .nav .nav-bar .social-media {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    width: 100vw !important;
+  }
+
+  .nav .nav-bar .social-media i {
+    margin: 0 1rem;
   }
 
   .menu-btn {
     display: flex !important;
   }
+}
 
+@media only screen and (max-width: 900px) {
   main .site-content {
     grid-template-columns: 100%;
   }
@@ -493,66 +583,84 @@ main.about-container p {
     margin-bottom: 0rem;
   }
 
-  main.about-container p {
-    margin: 2rem 2rem;
+  .site-content .sidebar .popular-post h3 {
+    font-size: 2rem;
+  }
+
+  .site-content .sidebar .popular-post .post-info span h4 {
+    font-size: 1.8rem;
+  }
+
+  footer.footer .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer.footer .move-up {
+    top: 65%;
   }
 }
 
-/*      Footer css       */
+@media only screen and (max-width: 400px) {
+  html {
+    overflow-x: hidden;
+  }
 
-footer.footer {
-  height: 100%;
-  background: #363f41;
-  position: relative;
-}
+  nav.nav {
+    width: 100vw;
+  }
 
-footer.footer .container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
+  nav .brand a {
+    font-size: 1.5rem !important;
+  }
 
-footer.footer .container > div {
-  flex-grow: 1;
-  flex-basis: 0;
-  padding: 3rem 0.9rem;
-  color: white;
-}
+  body .welcome {
+    background-position-x: center !important;
+  }
 
-footer.footer .container h2 {
-  color: white;
-  width: 30vw;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
-}
+  main .site-content .post-content .post-title {
+    width: 99vw;
+    margin: -1rem;
+  }
 
-footer.footer .follow div i {
-  color: white;
-  padding: 0.4rem;
-}
+  main .site-content .post-content .post-title p {
+    padding: 0.5rem;
+    width: 110%;
+    margin-left: -1rem;
+  }
 
-footer.footer .rights {
-  justify-content: center;
-  font-family: var(--libre);
-}
+  main .site-content .post-content > .post-image .post-info {
+    padding: 0.3rem;
+  }
 
-footer.footer .rights h4 {
-  color: rgb(128, 128, 128);
-  margin-bottom: 1rem;
-}
+  main .site-content .post-content > .post-image .post-info h3 {
+    font-size: 1.2rem;
+  }
 
-footer.footer .move-up {
-  position: absolute;
-  right: 6%;
-  top: 42%;
-}
+  footer.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
 
-footer.footer .move-up span {
-  color: var(--light-blue);
-}
+  footer.footer .about-me {
+    width: 100%;
+  }
 
-footer.footer .move-up span:hover {
-  color: white;
-  cursor: pointer;
+  footer.footer .follow h2 {
+    visibility: hidden;
+  }
+
+  footer.footer .move-up {
+    right: 10%;
+    top: 80%;
+  }
+
+  footer.footer .rights {
+    margin: 0 2rem;
+  }
 }
 
 /* Arrows keyframe */
@@ -574,7 +682,7 @@ footer.footer .move-up span:hover {
 @keyframes pulse {
   0% {
     transform: scale(0.95);
-    box-shadow: 0 0 0 0 var(--gainsboro);
+    box-shadow: 0 0 0 0 whitesmoke;
   }
 
   70% {

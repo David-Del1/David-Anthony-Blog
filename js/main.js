@@ -19,15 +19,4 @@ $('.move-up span').click(function () {
         $('html, body').animate({
             scrollTop: 0
         }, 2000);
-    })
-
-
-
-/*
-let toggle = document.getElementsByClassName('menu-btn')
-let nav = document.getElementsByClassName('nav')
-
-toggleButton.addEventListener('click', () => {
-    nav.classList.toggle('active')
-});
-*/
+    });
