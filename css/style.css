@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: var(--deepspace);
+  background-color: #000411;
   overflow-x: hidden;
 }
 
@@ -40,6 +40,10 @@ h3 {
   margin-bottom: 1rem;
 }
 
+img {
+  max-width: 100%;
+}
+
 span {
   font-family: var(--raleway);
 }
@@ -66,11 +70,10 @@ button.btn {
 :root {
   /*  Color variables  */
   --ivory: #fbfff1;
-  --catawba: #653239;
-  --onyx: #303635;
-  --deepspace: #586f6b;
-  --spanish: #9e9596;
+  --richblack: #000411;
+  --electric: #546a7b;
   --marigold: #f0a202;
+  --gunmetal: #243542;
   /* font variables */
 
   --exo: "exo";
@@ -81,7 +84,7 @@ button.btn {
 /*                Navigation Bar                      */
 
 .nav {
-  background: #303635;
+  background: var(--electric);
   height: 5rem;
   transition: height 1s ease-in-out;
   width: 100%;
@@ -242,7 +245,6 @@ body .welcome .welcome-text {
   position: absolute;
   top: 30%;
   left: 10%;
-  text-shadow: 1px 1px 4px black;
 }
 
 /* Arrows css */
@@ -292,8 +294,15 @@ main .site-content .recent-post-text {
 }
 
 main .site-content .recent-post-text h2 {
-  border-bottom: 2px solid black;
   padding-bottom: 1rem;
+}
+
+main .site-content .recent-post-text .underline {
+  border-top: 2px solid var(--marigold);
+  width: 3rem;
+  position: relative;
+  left: 46%;
+  margin-top: 1rem;
 }
 
 main .post-content {
@@ -307,7 +316,7 @@ main .site-content .post-content > .post-image,
 }
 
 main .site-content .post-content > .post-image .post-info {
-  background: var(--ivory);
+  background: var(--marigold);
   padding: 0.5rem;
   position: absolute;
   bottom: 0%;
@@ -327,6 +336,13 @@ main .site-content .post-content > .post-image .post-info:hover {
 
 main .site-content .post-content > .post-image .post-info h3 {
   margin-top: -0.5rem;
+  color: var(--ivory);
+  text-shadow: 0px 1px 2px black;
+}
+
+main .site-content .post-content > .post-image .post-info h5 {
+  text-shadow: 0px 0px 1px black;
+  font-size: 1rem;
 }
 
 main .site-content .post-content > .post-image > div {
@@ -366,11 +382,11 @@ main .site-content .post-content .post-title .btn {
 }
 
 .site-content .pagination i {
-  color: var(--onyx);
+  color: var(--marigold);
 }
 
 .site-content .pagination i:hover {
-  color: var(--catawba);
+  color: var(--ivory);
 }
 
 .site-content .pagination a {
@@ -381,7 +397,6 @@ main .site-content .post-content .post-title .btn {
 }
 
 .site-content .pagination .pages {
-  background-color: var(--deepspace);
   color: var(--ivory);
 }
 
@@ -419,36 +434,10 @@ main .site-content .post-content .post-title .btn {
   font-size: 1.1rem;
 }
 
-/* ------------------- About me css ---------------- */
-
-main.about-container .about-image {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-}
-
-main.about-container .about-image img {
-  margin-top: 8rem;
-  width: 30vw;
-  box-shadow: -5px 0px 10px black;
-}
-
-main.about-container p {
-  display: block;
-  margin: 2rem 5rem;
-  text-align: center;
-  line-height: 3rem;
-  font-size: 1.3rem;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  padding: 2.5rem 0;
-}
-
 /*      Footer css       */
 
 footer.footer {
-  background: #4a4849;
+  background: var(--gunmetal);
   position: relative;
   box-shadow: 0px 0px 7px black;
 }
@@ -471,13 +460,24 @@ footer.footer .container h2 {
 
 footer.footer .about-me {
   width: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 footer.footer .about-me h2 {
-  border-bottom: 3px solid #f0a202;
-  padding-bottom: 0.5rem;
-  padding-left: 0.8rem;
-  width: 6rem;
+  text-align: center;
+}
+
+footer.footer .about-me p {
+  text-align: center;
+}
+
+footer.footer .about-me .underline-1 {
+  border-top: 4px solid var(--marigold);
+  width: 3rem;
+  margin: 0 0 1rem 0rem;
 }
 
 footer.footer .follow {
@@ -494,7 +494,7 @@ footer.footer .rights {
   justify-content: center;
   font-family: var(--libre);
   color: var(--ivory);
-  opacity: 0.5;
+  opacity: 0.3;
 }
 
 footer.footer .rights h4 {
@@ -517,6 +517,76 @@ footer.footer .move-up span:hover {
   color: var(--marigold);
   cursor: pointer;
   transition: all 0.2s;
+}
+
+/*    Start Here CSS     */
+
+.title {
+  padding: 8rem 0 0 1rem;
+  color: var(--marigold);
+  font-family: var(--exo);
+  font-size: 1.6rem;
+  width: 75%;
+  border-bottom: 4px solid var(--ivory);
+  margin-left: 1rem;
+}
+
+.title h1 {
+  padding-bottom: 1rem;
+}
+
+.image-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.image-container img {
+  width: 23rem;
+  margin-top: 4rem;
+  padding: 1.3rem;
+  border: 2px solid var(--ivory);
+}
+
+.underline-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.underline-img {
+  border-bottom: 4px solid var(--marigold);
+  width: 4rem;
+  margin-top: 6rem;
+}
+
+.post-quote {
+  width: 100vw;
+  margin: 0rem 0 0 0;
+  text-align: center;
+}
+
+.post-quote p {
+  letter-spacing: 0.1rem;
+  font-size: 1.3rem;
+  padding: 4rem 6rem 0 6rem;
+}
+
+.main-text {
+  margin: 5rem 4rem;
+}
+
+.main-text p {
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  word-spacing: 0.2rem;
+  text-align: left;
+}
+
+.main-text span {
+  font-size: 8rem;
+  margin-right: 0.4rem;
+  color: var(--marigold);
 }
 
 /* =========================== Media queries ====================================== */
@@ -601,13 +671,102 @@ footer.footer .move-up span:hover {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .main-text {
+    margin: 5rem 2rem;
+  }
+
+  .post-quote {
+    margin: 8rem 4rem 0 4rem;
+  }
+
+  footer.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  footer.footer .about-me {
+    width: 100%;
+  }
+
+  footer.footer .follow h2 {
+    visibility: hidden;
+  }
+
+  footer.footer .move-up {
+    right: 10%;
+    top: 80%;
+  }
+
+  footer.footer .rights {
+    margin: 0 2rem;
+  }
+
+  footer.footer .about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-height: 50rem;
+  }
+
+  footer.footer .about-me h2 {
+    padding: 0;
+  }
+
+  footer.footer .about-me .underline-1 {
+    padding: 0;
+    margin: 0;
+  }
+
+  footer.footer .about-me p {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .image-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-container img {
+    width: 17rem;
+  }
+
+  .post-quote {
+    margin: 0;
+  }
+
+  .post-quote p {
+    padding: 2rem 1rem 4rem 1rem;
+    font-size: 1.2rem;
+  }
+
+  .main-text {
+    margin: 1rem;
+  }
+
+  .main-text p {
+    font-size: 1.5rem;
+  }
+
+  .main-text span {
+    font-size: 5rem;
+  }
+}
+
 @media only screen and (max-width: 400px) {
   html {
     overflow-x: hidden;
   }
 
   nav.nav {
-    width: 100vw;
+    width: 100%;
   }
 
   nav .brand a {
@@ -660,6 +819,60 @@ footer.footer .move-up span:hover {
 
   footer.footer .rights {
     margin: 0 2rem;
+  }
+
+  footer.footer .about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-height: 50rem;
+  }
+
+  footer.footer .about-me h2 {
+    padding: 0;
+  }
+
+  footer.footer .about-me .underline-1 {
+    padding: 0;
+    margin: 0;
+  }
+
+  footer.footer .about-me p {
+    margin-top: 1.5rem;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .image-container {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-container img {
+    width: 17rem;
+  }
+
+  .post-quote {
+    margin: 0;
+  }
+
+  .post-quote p {
+    padding: 2rem 1rem 4rem 1rem;
+    font-size: 1.2rem;
+  }
+
+  .main-text {
+    margin: 1rem;
+  }
+
+  .main-text p {
+    font-size: 1.5rem;
+  }
+
+  .main-text span {
+    font-size: 5rem;
   }
 }
 
